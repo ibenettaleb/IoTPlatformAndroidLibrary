@@ -13,7 +13,7 @@ public class SimpleProducer {
         System.out.println("Hi From SimpleProducer");
     }
 
-    private static void createTopic(String topicName, String key, String value) {
+    public static void createTopic(String topicName, String key, String value) {
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092,localhost:9093");
         props.put("key.serializer","org.apache.kafka.common.serialization.StringSerializer");
